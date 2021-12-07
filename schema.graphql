@@ -1,0 +1,10 @@
+type Account @entity {
+  id: ID! #this primary key is set as the toAddress
+}
+
+type Transfer @entity {
+  id: ID!
+  amount: BigInt
+  blockNumber: BigInt
+  to: Account! # receiving address
+}
